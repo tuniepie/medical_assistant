@@ -1,0 +1,16 @@
+This is a comprehensive test document for the DocumentProcessor.
+        
+        It contains multiple paragraphs to test the chunking functionality.
+        The document processor should be able to load this file, split it into chunks,
+        and provide proper metadata for each chunk.
+        
+        This paragraph discusses various topics including natural language processing,
+        document retrieval systems, and text analysis. The content is designed to be
+        long enough to trigger the chunking mechanism when processed.
+        
+        Here's another paragraph with different content. This helps test whether
+        the chunk boundaries are properly maintained and metadata is correctly assigned.
+        The system should handle various text formats and maintain document structure.
+        
+        Final paragraph to ensure we have enough content for multiple chunks.
+        This tests the complete pipeline from document loading to chunk creation.
