@@ -1,9 +1,9 @@
-streamlit
-docling
-langchain
-langchain-community
-langchain-core
-langchain-openai
-# openai
-pypdf
-faiss-cpu   
+streamlit==1.45.1
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-core==0.3.62
+langchain-cohere==0.4.4
+langchain-text-splitters==0.3.8
+pypdf==5.5.0
+faiss-cpu==1.11.0
+pydantic==2.11.5
