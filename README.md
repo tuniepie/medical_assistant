@@ -1,6 +1,6 @@
 # Medical Assistant RAG System
 
-A complete Retrieval-Augmented Generation (RAG) system that answers medical questions based on document corpus using LangChain, FAISS, and OpenAI GPT-4.
+A complete Retrieval-Augmented Generation (RAG) system that answers medical questions based on document corpus using [LangChain](https://python.langchain.com/docs/introduction), [FAISS](https://github.com/facebookresearch/faiss), and [Cohere](https://docs.cohere.com/cohere-documentation).
 
 ## 🚀 Live Demo
 
@@ -9,43 +9,74 @@ A complete Retrieval-Augmented Generation (RAG) system that answers medical ques
 ## 📋 Features
 
 - **Document Ingestion**: Support for PDF and TXT files
-- **Smart Chunking**: Intelligent text splitting with overlap
+- **Chunking**: text splitting with overlap
 - **Vector Search**: FAISS-powered semantic retrieval
-- **LLM Generation**: OpenAI GPT-4 for accurate responses
+- **LLM Generation**: [Cohere LLM](https://docs.cohere.com/v2/docs/models) for accurate responses
 - **Web Interface**: Clean Streamlit UI
 - **Comprehensive Logging**: Query tracking and debug information
 - **Source Attribution**: Shows retrieved document snippets
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Python, LangChain, FAISS
-- **LLM**: OpenAI GPT-4-turbo
+- **Backend**: Python, LangChain, FAISS, Cohere
+- **LLM**: Cohere command-r-plus
 - **Frontend**: Streamlit
-- **Embeddings**: OpenAI text-embedding-3-small
+- **Embeddings**: Cohere embed-english-v3.0
 - **Deployment**: Streamlit Cloud / HuggingFace Spaces
 
 ## 📁 Project Structure
 
 ```
 medical-rag-assistant/
-├── app.py                 # Main Streamlit application
+medical_assistant/
+├── app.py                          # Main Streamlit application
+├── requirements.txt                # Dependencies (updated versions)
+├── .env.example                   # Environment variables template
+├── .gitignore
+├── README.md
+├── config/
+│   ├── __init__.py
+│   └── settings.py                # Configuration management
 ├── src/
 │   ├── __init__.py
-│   ├── document_processor.py  # Document ingestion & chunking
-│   ├── vector_store.py       # FAISS vector store management
-│   ├── rag_pipeline.py       # Core RAG logic
-│   └── logger.py            # Logging configuration
+│   ├── components/               # RAG Components
+│   │   ├── __init__.py
+│   │   ├── data_loader.py       # Document loading component
+│   │   ├── data_processor.py    # Text processing & chunking
+│   │   ├── embedding.py         # Embedding generation
+│   │   ├── vector_store.py      # Vector storage management
+│   │   ├── retriever.py         # Information retrieval
+│   │   └── generator.py         # Response generation
+│   ├── core/
+│   │   ├── __init__.py
+│   │   └── rag_pipeline.py      # Orchestrates all components
+│   └── utils/
+│       ├── __init__.py
+│       ├── logger.py            # Logging utilities
+│       └── helpers.py           # Helper functions
 ├── data/
-│   ├── sample_documents/    # Sample medical documents
-│   └── vector_store/        # FAISS index storage
-├── logs/                    # Application logs
-├── requirements.txt         # Python dependencies
-├── .env.example            # Environment variables template
-├── .gitignore
-└── README.md
+│   ├── documents/               # Source documents
+│   └── processed/              # Processed data cache
+├── tests/                      # Test file
+│    ├── __init__.py
+│    ├── test_components/
+│    │   ├── test_data_loader.py
+│    │   ├── test_data_processor.py
+│    │   ├── test_embedding.py
+│    │   ├── test_vector_store.py
+│    │   ├── test_retriever.py
+│    │   └── test_generator.py
+│    └── test_integration/
+│        └── test_rag_pipeline.py
+└── logs/                       # Application logs
 ```
 
 ## 🚀 Quick Start
+
+## 📋 Requirements
+
+- Python 3.10
+- Cohere API key
 
 ### 1. Clone the Repository
 
@@ -54,27 +85,27 @@ git clone https://github.com/yourusername/medical-rag-assistant.git
 cd medical-rag-assistant
 ```
 
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set Up Environment Variables
+### 2. Set Up Environment Variables
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` and add your OpenAI API key:
+Edit `.env` and add your Cohere API key:
 ```
-OPENAI_API_KEY=your_openai_api_key_here
+COHERE_API_KEY=your_cohere_api_key_here
 ```
 
-### 4. Run the Application
+### 3. Run the Application on local
 
 ```bash
+pip install -r requirements.txt
 streamlit run app.py
+```
+### 4. Run the Application on local
+```bash
+docker build -t streamlit-app .
+docker run -p 8501:8501 streamlit-app
 ```
 
 The app will be available at `http://localhost:8501`
@@ -94,7 +125,7 @@ The app will be available at `http://localhost:8501`
 - **Retrieval**: Top 3 most relevant chunks
 
 ### LLM Settings
-- **Model**: gpt-4-turbo
+- **Model**: command-r-plus
 - **Temperature**: 0.1 (for consistent medical responses)
 - **Max Tokens**: 1000
 
@@ -138,30 +169,8 @@ The `data/sample_documents/` folder contains example medical documents:
 - **RAGPipeline**: Orchestrates retrieval and generation
 - **Logger**: Provides structured logging throughout the system
 
-## 📝 Example Queries
 
-Try these sample questions:
-- "What are the clinic's operating hours?"
-- "What should I do if I have a fever?"
-- "What are the vaccination requirements?"
-- "How do I schedule an appointment?"
 
-## 🛠️ Development
-
-### Adding New Document Types
-Extend `DocumentProcessor` to support additional file formats.
-
-### Customizing Retrieval
-Modify `VectorStore` to adjust similarity search parameters.
-
-### Enhancing Responses
-Update the prompt template in `RAGPipeline` for domain-specific improvements.
-
-## 📋 Requirements
-
-- Python 3.8+
-- OpenAI API key
-- Internet connection for model access
 
 ## 🤝 Contributing
 
@@ -175,26 +184,4 @@ Update the prompt template in `RAGPipeline` for domain-specific improvements.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Troubleshooting
-
-### Common Issues
-
-**"OpenAI API key not found"**
-- Ensure `.env` file exists with valid `OPENAI_API_KEY`
-
-**"No documents found"**
-- Upload documents using the sidebar
-- Check that files are PDF or TXT format
-
-**"Vector store not initialized"**
-- Documents need to be processed first before asking questions
-
-### Getting Help
-
-- Check the logs in the Streamlit interface
-- Review `logs/rag_system.log` for detailed error information
-- Ensure all dependencies are installed correctly
-
 ---
-
-**Built with ❤️ for the AI Engineer Technical Test**
