@@ -6,10 +6,10 @@ import streamlit as st
 import os
 import tempfile
 from datetime import datetime
-from src.document_processor import DocumentProcessor
-from src.vector_store import VectorStore
-from src.rag_pipeline import RAGPipeline
-from src.logger import setup_logger
+from src.components.data_processor import DataProcessor
+from src.components.vector_store import VectorStore
+from src.core.rag_pipeline import RAGPipeline
+from src.utils.logger import setup_logger
 
 # Initialize logger
 logger = setup_logger()
@@ -51,7 +51,7 @@ st.markdown("""
 def initialize_session_state():
     """Initialize session state variables"""
     if 'doc_processor' not in st.session_state:
-        st.session_state.doc_processor = DocumentProcessor()
+        st.session_state.doc_processor = DataProcessor()
     if 'vector_store' not in st.session_state:
         st.session_state.vector_store = VectorStore()
     if 'rag_pipeline' not in st.session_state:
@@ -85,7 +85,7 @@ def process_uploaded_files(uploaded_files):
         # Create vector store
         if all_chunks:
             with st.spinner("Creating vector embeddings..."):
-                st.session_state.vector_store.create_vector_store(all_chunks)
+                st.session_state.vector_store.create(all_chunks)
                 st.session_state.documents_processed = True
                 
             st.success(f"🎯 Vector store created with {len(all_chunks)} total chunks!")
@@ -179,8 +179,8 @@ def main():
                     # Get response from RAG pipeline
                     response_data = st.session_state.rag_pipeline.generate_response(
                         query=prompt,
-                        vector_store=st.session_state.vector_store,
-                        k=k_value,
+                        # k=k_value,
+                        vectorstore=st.session_state.vector_store,
                         temperature=temperature
                     )
                     
