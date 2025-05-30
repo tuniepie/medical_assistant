@@ -3,7 +3,7 @@ import shutil
 import unittest
 import numpy as np
 from langchain_core.documents import Document
-from src.vector_store import VectorStore
+from src.components.vector_store import VectorStore
 
 # ===== Utility for color logs =====
 def color_text(text, color="cyan"):

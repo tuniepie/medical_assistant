@@ -1,7 +1,7 @@
 import os
 import unittest
 from typing import List
-from src.document_processor import (
+from src.components.data_processor import (
     DocumentProcessor,
     supported_file_types,
     validate_file_type,

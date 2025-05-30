@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 from langchain_core.documents import Document
-from src.rag_pipeline import RAGPipeline
+from medical_assistant_prototype.src.core.rag_pipeline import RAGPipeline
 
 
 class TestRAGPipeline(unittest.TestCase):
