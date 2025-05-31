@@ -212,6 +212,8 @@ def main():
                     # Log the interaction
                     logger.info(f"Query: {prompt}")
                     logger.info(f"Retrieved {len(response_data['sources'])} sources")
+                    logger.info(f"retrieved documents, {response_data['sources']}")
+                    logger.info(f"Response: {response_data['answer'][:100]}...")  
                     logger.info(f"Response generated successfully")
                     
                 except Exception as e:
