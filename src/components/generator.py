@@ -1,3 +1,4 @@
+import streamlit as st
 from typing import Optional
 from langchain_cohere import ChatCohere
 from langchain_core.language_models.chat_models import BaseChatModel
@@ -16,12 +17,19 @@ class Generator:
         self.model_name = self.settings.llm
         self.temperature = self.settings.temperature
         self.max_tokens = self.settings.max_tokens
+        self.cohere_api_key = None
         self.llm: BaseChatModel = self._load_llm()
         self.prompt = self._create_prompt_template()
-
+        
+        
     def _load_llm(self) -> BaseChatModel:
+        if st.session_state.get("cohere_api_key"):
+            self.cohere_api_key = st.session_state["cohere_api_key"]
+        else:
+            self.cohere_api_key = self.settings.cohere_api_key
+
         return ChatCohere(
-            cohere_api_key=self.settings.cohere_api_key,
+            cohere_api_key=self.cohere_api_key,
             model=self.model_name,
             temperature=self.temperature,
             max_tokens=self.max_tokens,
