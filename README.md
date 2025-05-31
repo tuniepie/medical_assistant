@@ -1,6 +1,6 @@
 # Medical Assistant RAG System
 
-A complete Retrieval-Augmented Generation (RAG) system that answers medical questions based on document corpus using [LangChain](https://python.langchain.com/docs/introduction), [FAISS](https://github.com/facebookresearch/faiss), and [Cohere](https://docs.cohere.com/cohere-documentation) ([Cohere limits]).
+A complete Retrieval-Augmented Generation (RAG) system that answers medical questions based on document corpus using [LangChain](https://python.langchain.com/docs/introduction), [FAISS](https://github.com/facebookresearch/faiss), and [Cohere](https://docs.cohere.com/cohere-documentation).
 
 ## 🚀 Live Demo
 
