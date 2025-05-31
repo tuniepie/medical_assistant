@@ -96,13 +96,13 @@ Edit `.env` and add your Cohere API key:
 COHERE_API_KEY=your_cohere_api_key_here
 ```
 
-### 3. Run the Application on local
+### 3.1 Run the Application on local
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-### 4. Run the Application on local
+## Run the Application with docker
 ```bash
 docker build -t streamlit-app .
 docker run -p 8501:8501 streamlit-app
@@ -118,7 +118,7 @@ The app will be available at `http://localhost:8501`
 4. **Check Logs**: Monitor the logs section for debugging information
 
 ## 🔧 Configuration
-
+You can modify this in `medical_assistant\config\settings.py`
 ### Document Processing
 - **Chunk Size**: 1000 characters
 - **Chunk Overlap**: 200 characters  
@@ -139,26 +139,13 @@ The system logs:
 
 Logs are stored in `logs/rag_system.log` with rotation.
 
-## 🚀 Deployment
-
-### Streamlit Cloud
-1. Push code to GitHub
-2. Connect repository to Streamlit Cloud
-3. Add environment variables in Streamlit settings
-4. Deploy automatically
-
-### HuggingFace Spaces
-1. Create new Space with Streamlit SDK
-2. Upload repository files
-3. Add OpenAI API key to Space secrets
-4. Space will auto-deploy
 
 ## 🧪 Sample Documents
 
 The `data/sample_documents/` folder contains example medical documents:
-- Medical clinic policies
-- Treatment guidelines
-- General health information
+- Subdocs Alzheimer's disease
+- Subdocs beriberi desease
+
 
 ## 🔍 API Structure
 
@@ -169,16 +156,6 @@ The `data/sample_documents/` folder contains example medical documents:
 - **RAGPipeline**: Orchestrates retrieval and generation
 - **Logger**: Provides structured logging throughout the system
 
-
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## 📄 License
 
