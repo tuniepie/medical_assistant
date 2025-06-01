@@ -49,8 +49,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 def initialize_session_state():
-    if 'cohere_api_key' not in st.session_state:
-        st.session_state.cohere_api_key = None
     if 'doc_processor' not in st.session_state:
         st.session_state.doc_processor = DataProcessor()
     if 'vector_store' not in st.session_state:
@@ -150,12 +148,16 @@ def display_chat_message(role, content, sources=None):
                     """, unsafe_allow_html=True)
 
 def main():
-    initialize_session_state()
-
-    # Ask for API key first
+    if 'cohere_api_key' not in st.session_state:
+        st.session_state.cohere_api_key = None
+    
     if not st.session_state.cohere_api_key:
         api_key_form()
         st.stop()
+    initialize_session_state()
+
+    # Ask for API key first
+    
 
     # Header
     st.markdown('<h1 class="main-header">🏥 Medical Assistant RAG System</h1>', unsafe_allow_html=True)
@@ -232,40 +234,6 @@ def main():
                         "content": error_message
                     })
     
-    # Footer with logs
-    # with st.expander("🔍 System Logs", expanded=False):
-    #     st.subheader("Recent Activity")
-    #     try:
-    #         with open("logs/rag_system.log", "r") as f:
-    #             logs = f.readlines()
-    #             # Show last 20 log entries
-    #             recent_logs = logs[-20:] if len(logs) > 20 else logs
-    #             for log in recent_logs:
-    #                 st.text(log.strip())
-    #     except FileNotFoundError:
-    #         st.info("No logs available yet.")
-    #     except Exception as e:
-    #         st.error(f"Error reading logs: {str(e)}")
-    
-    # # Sample questions
-    # st.header("💡 Sample Questions")
-    # col1, col2 = st.columns(2)
-    
-    # sample_questions = [
-    #     "What are the clinic's operating hours?",
-    #     "What should I do if I have a fever?",
-    #     "What are the vaccination requirements?",
-    #     "How do I schedule an appointment?",
-    #     "What is the policy for prescription refills?",
-    #     "What should I bring to my first appointment?"
-    # ]
-    
-    # for i, question in enumerate(sample_questions):
-    #     col = col1 if i % 2 == 0 else col2
-    #     with col:
-    #         if st.button(question, key=f"sample_{i}"):
-    #             st.session_state.sample_question = question
-    #             st.rerun()
 
 if __name__ == "__main__":
     main()
