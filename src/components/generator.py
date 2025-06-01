@@ -5,9 +5,7 @@ from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.prompts import ChatPromptTemplate
 
 from config.settings import get_settings
-from src.utils.logger import setup_logger
-
-logger = setup_logger()
+from src.utils.logger import logger
     
 class Generator:
     """Handles language model and prompt template for generation without using LLMChain."""

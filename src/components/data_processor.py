@@ -1,11 +1,9 @@
 from typing import List, Optional
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from src.utils.logger import setup_logger
+from src.utils.logger import logger
 from src.components.data_loader import DataLoader
 import os
-
-logger = setup_logger()
 
 class DataProcessor:
     """Handles text preprocessing, chunking, and metadata tagging."""

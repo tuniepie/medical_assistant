@@ -4,12 +4,10 @@ import shutil
 from typing import List, Optional
 from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
-from src.utils.logger import setup_logger
+from src.utils.logger import logger
 from src.components.embedding import EmbeddingModel
 from config.settings import get_settings
 
-
-logger = setup_logger()
 
 class VectorStore:
     def __init__(self, store_path: str = "data/vector_db"):

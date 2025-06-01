@@ -2,13 +2,13 @@ import os
 from typing import List
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_core.documents import Document
-from src.utils.logger import setup_logger
+from src.utils.logger import logger
 
-logger = setup_logger()
+
 
 class DataLoader:
     """Handles loading documents from different file formats"""
-
+    
     def load(self, file_path: str) -> List[Document]:
         """Load a single document"""
         try:
