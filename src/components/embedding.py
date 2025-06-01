@@ -1,9 +1,7 @@
 import streamlit as st
 from langchain_cohere import CohereEmbeddings
 from config.settings import get_settings
-from src.utils.logger import setup_logger
-
-logger = setup_logger()
+from src.utils.logger import logger
 
 class EmbeddingModel:
     def __init__(self):
