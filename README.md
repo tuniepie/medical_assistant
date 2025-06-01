@@ -4,7 +4,17 @@ A complete Retrieval-Augmented Generation (RAG) system that answers medical ques
 
 ## 🚀 Live Demo
 
-**Deployed URL**: [Your deployment URL will go here]
+**Deployed URL**:
+- [Streamlit Cloud](https://medicalassistant-luuthanhtung.streamlit.app/)
+- [Hugging Face]()
+
+## Architecture
+![Architecture](assets/architecture.jpg)
+### Core Components
+- **DocumentProcessor**: Handles file ingestion and text chunking
+- **VectorStore**: Manages FAISS index and similarity search
+- **RAGPipeline**: Orchestrates retrieval and generation
+- **Logger**: Provides structured logging throughout the system
 
 ## 📋 Features
 
@@ -31,7 +41,7 @@ medical-rag-assistant/
 medical_assistant/
 ├── app.py                          # Main Streamlit application
 ├── requirements.txt                # Dependencies (updated versions)
-├── .env.example                   # Environment variables template
+├── .env                            # Environment variables template
 ├── .gitignore
 ├── README.md
 ├── config/
@@ -49,7 +59,7 @@ medical_assistant/
 │   │   └── generator.py         # Response generation
 │   ├── core/
 │   │   ├── __init__.py
-│   │   └── rag_pipeline.py      # Orchestrates all components
+│   │   └── rag_pipeline.py      # Orchestrates retrieval and generation
 │   └── utils/
 │       ├── __init__.py
 │       ├── logger.py            # Logging utilities
@@ -57,7 +67,7 @@ medical_assistant/
 ├── data/
 │   ├── documents/               # Source documents
 │   └── processed/              # Processed data cache
-├── tests/                      # Test file
+├── tests/                      # Unit test
 │    ├── __init__.py
 │    ├── test_components/
 │    │   ├── test_data_loader.py
@@ -73,7 +83,7 @@ medical_assistant/
 
 ## 🚀 Quick Start
 
-## 📋 Requirements
+### 📋 Requirements
 
 - Python 3.10
 - [Cohere API key](https://docs.cohere.com/v2/docs/rate-limits) - [How to get it?](https://docs.aicontentlabs.com/articles/cohere-api-key/)
@@ -85,24 +95,14 @@ git clone https://github.com/yourusername/medical-rag-assistant.git
 cd medical-rag-assistant
 ```
 
-### 2. Set Up Environment Variables
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` and add your Cohere API key:
-```
-COHERE_API_KEY=your_cohere_api_key_here
-```
-
-### 3.1 Run the Application on local
+### 2.1. Run the Application on local
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-## Run the Application with docker
+### 2.2. OR Run the Application with docker
+
 ```bash
 docker build -t streamlit-app .
 docker run -p 8501:8501 streamlit-app
@@ -110,15 +110,8 @@ docker run -p 8501:8501 streamlit-app
 
 The app will be available at `http://localhost:8501`
 
-## 📚 Usage
-
-1. **Upload Documents**: Use the sidebar to upload PDF or TXT files
-2. **Ask Questions**: Enter your medical question in the text input
-3. **View Results**: See the AI response along with source documents
-4. **Check Logs**: Monitor the logs section for debugging information
-
 ## 🔧 Configuration
-You can modify this in `medical_assistant\config\settings.py`
+You can modify this in [`medical_assistant\config\settings.py`](config/settings.py)
 ### Document Processing
 - **Chunk Size**: 1000 characters
 - **Chunk Overlap**: 200 characters  
@@ -132,6 +125,8 @@ You can modify this in `medical_assistant\config\settings.py`
 ## 📊 Logging
 
 The system logs:
+- Console logging is always enabled for real-time debugging.
+- File logging can be enabled or disabled using the `enable_file_logging` flag in [settings](config/settings.py).
 - User queries and timestamps
 - Retrieved document chunks with scores
 - LLM responses and processing times
@@ -146,19 +141,8 @@ The `data/sample_documents/` folder contains example medical documents:
 - Subdocs Alzheimer's disease
 - Subdocs beriberi desease
 
-
-## 🔍 API Structure
-
-### Core Components
-
-- **DocumentProcessor**: Handles file ingestion and text chunking
-- **VectorStore**: Manages FAISS index and similarity search
-- **RAGPipeline**: Orchestrates retrieval and generation
-- **Logger**: Provides structured logging throughout the system
+[![Video Demo App](https://img.youtube.com/vi/ugD-2esz9-k/0.jpg)](https://www.youtube.com/watch?v=ugD-2esz9-k)
 
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
----
