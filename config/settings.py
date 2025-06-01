@@ -1,6 +1,5 @@
-import os
 from functools import lru_cache
-from pydantic_settings  import BaseSettings
+from pydantic_settings  import BaseSettings, SettingsConfigDict  
 
 class Settings(BaseSettings):
     """Application settings"""
@@ -14,8 +13,7 @@ class Settings(BaseSettings):
     llm: str = "command-r-plus"
     embedding_model_name: str = "embed-english-v3.0"
     
-    class Config:
-        env_file = ".env"
+    model_config = SettingsConfigDict(env_file=".env")
 
 @lru_cache()
 def get_settings():
