@@ -1,9 +1,11 @@
 import numpy as np
 from typing import List, Tuple
 from langchain_core.documents import Document
-from src.utils.logger import logger
+from src.utils.logger import setup_logger
 from src.components.embedding import EmbeddingModel
 from src.components.vector_store import VectorStore
+
+logger = setup_logger()
 
 class Retriever:
     def __init__(self, store_manager: VectorStore):

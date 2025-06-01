@@ -4,8 +4,10 @@ from langchain_core.documents import Document
 from src.components.generator import Generator
 from src.components.retriever import Retriever
 from src.components.vector_store import VectorStore
-from src.utils.logger import logger
+from src.utils.logger import setup_logger
 from config.settings import get_settings
+
+logger = setup_logger()
 
 class RAGPipeline:
     """Complete RAG pipeline for medical question answering."""

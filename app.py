@@ -9,7 +9,10 @@ from datetime import datetime
 from src.components.data_processor import DataProcessor
 from src.components.vector_store import VectorStore
 from src.core.rag_pipeline import RAGPipeline
-from src.utils.logger import logger
+from src.utils.logger import setup_logger
+
+# Initialize logger
+logger = setup_logger()
 
 # Page configuration
 st.set_page_config(
