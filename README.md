@@ -6,7 +6,7 @@ A complete Retrieval-Augmented Generation (RAG) system that answers medical ques
 
 **Deployed URL**:
 - [Streamlit Cloud](https://medicalassistant-luuthanhtung.streamlit.app/)
-- [Hugging Face]()
+- [HuggingFace Space](https://huggingface.co/spaces/tuniel/medicalassistant-tungluu)
 
 ## Architecture
 ![Architecture](assets/architecture.jpg)
@@ -141,8 +141,7 @@ The `data/sample_documents/` folder contains example medical documents:
 - Subdocs Alzheimer's disease
 - Subdocs beriberi desease
 
-[![Video Demo App](https://img.youtube.com/vi/ugD-2esz9-k/0.jpg)](https://www.youtube.com/watch?v=ugD-2esz9-k)
-
-
+## 🎬 Video Demo
+[![Video Demo App](https://img.youtube.com/vi/ugD-2esz9-k/default.jpg)](https://www.youtube.com/watch?v=ugD-2esz9-k)
 
 
