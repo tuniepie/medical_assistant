@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     temperature: float = 0.1
     llm: str = "command-r-plus"
     embedding_model_name: str = "embed-english-v3.0"
-    enable_file_logging: bool = True
+    enable_file_logging: bool = False
     
     model_config = SettingsConfigDict(env_file=".env")
 
