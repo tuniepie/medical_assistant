@@ -1,0 +1,77 @@
+
+2025-06-01 00:27:30 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:27:30 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:45 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:51 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:52 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:31:52 - rag_system - INFO - data_loader:load:24 - Loaded document: C:\Users\asus\AppData\Local\Temp\tmp8rhg04qf.pdf with 1 pages/sections
+2025-06-01 00:31:52 - rag_system - INFO - data_processor:chunk_documents:27 - Split 1 documents into 4 chunks
+2025-06-01 00:31:52 - rag_system - INFO - data_processor:process_document:47 - Processed Alzheimer's_disease-pages.pdf: 4 chunks
+2025-06-01 00:31:53 - rag_system - INFO - vector_store:create:31 - Vector store created with 4 documents
+2025-06-01 00:31:53 - rag_system - INFO - app_deploy:process_uploaded_files:127 - Processed 1 files with 4 total chunks
+2025-06-01 00:32:05 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:32:05 - rag_system - INFO - embedding:__init__:22 - Cohere embeddings initialized with model: embed-english-v3.0
+2025-06-01 00:32:05 - rag_system - INFO - retriever:similarity_search:19 - Searching top 3 documents for query: what is alzheimer...
+2025-06-01 00:32:14 - rag_system - INFO - app_deploy:main:224 - Query: what is alzheimer
+2025-06-01 00:32:14 - rag_system - INFO - app_deploy:main:225 - Retrieved 3 sources
+2025-06-01 00:32:30 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 00:32:30 - rag_system - INFO - data_processor:__init__:22 - DataProcessor initialized - chunk_size: 1000, overlap: 200
+2025-06-01 00:32:31 - rag_system - INFO - embedding:__init__:22 - Cohere embeddings initialized with model: embed-english-v3.0
+2025-06-01 00:32:31 - rag_system - INFO - vector_store:__init__:24 - VectorStore initialized with model: embed-english-v3.0
+2025-06-01 20:34:43 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:43 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:46 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:46 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:47 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:47 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:47 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:47 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:34:47 - rag_system - INFO - data_processor:__init__:22 - DataProcessor initialized - chunk_size: 1000, overlap: 200
+2025-06-01 20:34:48 - rag_system - INFO - embedding:__init__:22 - Cohere embeddings initialized with model: embed-english-v3.0
+2025-06-01 20:34:48 - rag_system - INFO - vector_store:__init__:24 - VectorStore initialized with model: embed-english-v3.0
+2025-06-01 20:35:00 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:05 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:05 - rag_system - INFO - rag_pipeline:update_settings:137 - Updated settings: temperature: 0.3
+2025-06-01 20:35:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:06 - rag_system - INFO - rag_pipeline:update_settings:137 - Updated settings: temperature: 0.4
+2025-06-01 20:35:08 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:08 - rag_system - INFO - rag_pipeline:update_settings:137 - Updated settings: temperature: 0.2
+2025-06-01 20:35:09 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:09 - rag_system - INFO - rag_pipeline:update_settings:137 - Updated settings: temperature: 0.3
+2025-06-01 20:35:11 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:11 - rag_system - INFO - rag_pipeline:update_settings:137 - Updated settings: retrieval_k: 4
+2025-06-01 20:35:11 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:12 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:12 - rag_system - INFO - data_loader:load:24 - Loaded document: C:\Users\asus\AppData\Local\Temp\tmp7hg1oye8.pdf with 1 pages/sections
+2025-06-01 20:35:12 - rag_system - INFO - data_processor:chunk_documents:27 - Split 1 documents into 4 chunks
+2025-06-01 20:35:12 - rag_system - INFO - data_processor:process_document:47 - Processed Alzheimer's_disease-pages.pdf: 4 chunks
+2025-06-01 20:35:13 - rag_system - INFO - vector_store:create:31 - Vector store created with 4 documents
+2025-06-01 20:35:13 - rag_system - INFO - app:process_uploaded_files:92 - Processed 1 files with 4 total chunks
+2025-06-01 20:35:35 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:35:37 - rag_system - INFO - embedding:__init__:22 - Cohere embeddings initialized with model: embed-english-v3.0
+2025-06-01 20:35:37 - rag_system - INFO - retriever:similarity_search:19 - Searching top 4 documents for query: Cause of alzheimer...
+2025-06-01 20:35:38 - rag_system - INFO - generator:update:78 - Generator updated with new configuration.
+2025-06-01 20:35:45 - rag_system - INFO - app:main:213 - Query: Cause of alzheimer
+2025-06-01 20:35:45 - rag_system - INFO - app:main:214 - Retrieved 4 sources
+2025-06-01 20:35:45 - rag_system - INFO - app:main:215 - retrieved documents, [(Document(id='7ca47849-80c9-4676-83c2-e5f70de46ed4', metadata={'producer': 'Pdftools SDK', 'creator': 'PyPDF', 'creationdate': '', 'moddate': '2025-05-29T11:29:16+00:00', 'source': "Alzheimer's_disease-pages.pdf", 'total_pages': 1, 'page': 0, 'page_label': '1', 'file_path': 'C:\\Users\\asus\\AppData\\Local\\Temp\\tmp7hg1oye8.pdf', 'chunk_id': 2, 'chunk_size': 991}, page_content="The causes of Alzheimer's disease remain poorly\nunderstood.[16] There are many environmental and\ngenetic risk factors associated with its development.\nThe strongest genetic risk factor is from an allele of\napolipoprotein E.[17][18] Other risk factors include a\nhistory of head injury, clinical depression, and high\nblood pressure.[1] The progression of the disease is\nlargely characterised by the accumulation of\nmalformed protein deposits in the cerebral cortex,\ncalled amyloid plaques and neurofibrillary tangles.\nThese misfolded protein aggregates interfere with\nnormal cell function, and over time lead to irreversible\ndegeneration of neurons and loss of synaptic\nconnections in the brain.[19] A probable diagnosis is\nbased on the history of the illness and cognitive\ntesting, with medical imaging and blood tests to rule\nout other possible causes.[8][20] Initial symptoms are\noften mistaken for normal brain aging.[16] Examination\nof brain tissue is needed for a definite diagnosis, but"), np.float32(0.6391219)), (Document(id='95b2ca17-b3ff-4d44-b1b6-a6310923599d', metadata={'producer': 'Pdftools SDK', 'creator': 'PyPDF', 'creationdate': '', 'moddate': '2025-05-29T11:29:16+00:00', 'source': "Alzheimer's_disease-pages.pdf", 'total_pages': 1, 'page': 0, 'page_label': '1', 'file_path': 'C:\\Users\\asus\\AppData\\Local\\Temp\\tmp7hg1oye8.pdf', 'chunk_id': 1, 'chunk_size': 951}, page_content="21[10]\nMedication Acetylcholinesterase\ninhibitors, NMDA receptor\nAlzheimer's disease\nAlzheimer's disease (AD) is a neurodegenerative\ndisease that usually starts slowly and progressively\nworsens.[2] It is the cause of 60–70% of cases of\ndementia.[2][15] The most common early symptom is\ndifficulty in remembering recent events.[1] As the\ndisease advances, symptoms can include problems\nwith language, disorientation (including easily getting\nlost), mood swings, loss of motivation, self-neglect,\nand behavioral issues.[2] As a person's condition\ndeclines, they often withdraw from family and\nsociety.[16] Gradually, bodily functions are lost,\nultimately leading to death. Although the speed of\nprogression can vary, the average life expectancy\nfollowing diagnosis is three to twelve years.[11][12][13]\nThe causes of Alzheimer's disease remain poorly\nunderstood.[16] There are many environmental and\ngenetic risk factors associated with its development."), np.float32(0.7340708)), (Document(id='172857a9-0a09-4601-8ef6-1bbbf6fb8667', metadata={'producer': 'Pdftools SDK', 'creator': 'PyPDF', 'creationdate': '', 'moddate': '2025-05-29T11:29:16+00:00', 'source': "Alzheimer's_disease-pages.pdf", 'total_pages': 1, 'page': 0, 'page_label': '1', 'file_path': 'C:\\Users\\asus\\AppData\\Local\\Temp\\tmp7hg1oye8.pdf', 'chunk_id': 0, 'chunk_size': 952}, page_content="Alzheimer's disease\nOther names Alzheimer's dementia\nDiagram of a normal brain compared to the\nbrain of a person with Alzheimer's\nPronunciation /ˈæltshaɪmərz/,\nUS also /ˈɑːlts-/\nSpecialty Neurology\nSymptoms Memory loss, problems with\nlanguage, disorientation,\nmood swings[1][2]\nComplications Infections, falls and aspiration\npneumonia in the terminal\nstage[3]\nUsual onset Over 65 years old[4]\nDuration Long term[2]\nCauses Poorly understood[1]\nRisk factors Genetics, head injuries,\nclinical depression,\nhypertension,[1] psychological\nstress,[5] lack of physical[6]\nand mental[5][7] exercise\nDiagnostic\nmethod\nBased on symptoms and\ncognitive testing after ruling\nout other possible causes[8]\nDifferential\ndiagnosis\nNormal brain aging,[1] Lewy\nbody dementia,[9] Trisomy\n21[10]\nMedication Acetylcholinesterase\ninhibitors, NMDA receptor\nAlzheimer's disease\nAlzheimer's disease (AD) is a neurodegenerative\ndisease that usually starts slowly and progressively"), np.float32(0.83069885)), (Document(id='cac1057d-93f4-420c-af74-c38209399f8f', metadata={'producer': 'Pdftools SDK', 'creator': 'PyPDF', 'creationdate': '', 'moddate': '2025-05-29T11:29:16+00:00', 'source': "Alzheimer's_disease-pages.pdf", 'total_pages': 1, 'page': 0, 'page_label': '1', 'file_path': 'C:\\Users\\asus\\AppData\\Local\\Temp\\tmp7hg1oye8.pdf', 'chunk_id': 3, 'chunk_size': 462}, page_content='out other possible causes.[8][20] Initial symptoms are\noften mistaken for normal brain aging.[16] Examination\nof brain tissue is needed for a definite diagnosis, but\nthis can only take place after death.[21][22]\nNo treatments can stop or reverse its progression,\nthough some may temporarily improve symptoms.[2] A\nhealthy diet, physical activity, and social engagement\nare generally beneficial in aging, and may help in\nreducing the risk of cognitive decline and'), np.float32(1.0353059))]
+2025-06-01 20:35:45 - rag_system - INFO - app:main:216 - Response: The exact cause of Alzheimer's disease is not fully understood, but it is believed to be a combinati...
+2025-06-01 20:35:45 - rag_system - INFO - app:main:217 - Response generated successfully
+2025-06-01 20:42:03 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:03 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:06 - rag_system - INFO - logger:setup_logger:69 - Logger 'rag_system' initialized - Level: INFO
+2025-06-01 20:42:07 - rag_system - INFO - data_processor:__init__:22 - DataProcessor initialized - chunk_size: 1000, overlap: 200
+2025-06-01 20:42:08 - rag_system - INFO - embedding:__init__:22 - Cohere embeddings initialized with model: embed-english-v3.0
+2025-06-01 20:42:08 - rag_system - INFO - vector_store:__init__:24 - VectorStore initialized with model: embed-english-v3.0
