@@ -133,7 +133,21 @@ The system logs:
 - Error handling and debug information
 
 Logs are stored in `logs/rag_system.log` with rotation.
+### Logging Monitor 
 
+Run ELK stack with `Filebeat`
+```bash
+cd /src/elk
+docker compose -f elk-docker-compose.yml -f extensions/filebeat/filebeat-compose.yml up -d
+```
+Quickly run a container so that `Filebeat` can collect logs from it
+```bash
+docker run -p 8501:8501 streamlit-app
+```
+#### Access services
+- Kibana: http://localhost:5601 with `username/password` is `elastic/changeme`
+
+![kibana interface](assets/logs_monitor.png)
 
 ## 🧪 Sample Documents
 
