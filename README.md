@@ -6,7 +6,7 @@ A complete Retrieval-Augmented Generation (RAG) system that answers medical ques
 
 **Deployed URL**:
 - [Streamlit Cloud](https://medicalassistant-luuthanhtung.streamlit.app/)
-- [Hugging Face]()
+- [HuggingFace Space](https://huggingface.co/spaces/tuniel/medicalassistant-tungluu)
 
 ## Architecture
 ![Architecture](assets/architecture.jpg)
@@ -133,7 +133,21 @@ The system logs:
 - Error handling and debug information
 
 Logs are stored in `logs/rag_system.log` with rotation.
+### Logging Monitor 
 
+Run ELK stack with `Filebeat`
+```bash
+cd /src/elk
+docker compose -f elk-docker-compose.yml -f extensions/filebeat/filebeat-compose.yml up -d
+```
+Quickly run a container so that `Filebeat` can collect logs from it
+```bash
+docker run -p 8501:8501 streamlit-app
+```
+#### Access services
+- Kibana: http://localhost:5601 with `username/password` is `elastic/changeme`
+
+![kibana interface](assets/logs_monitor.png)
 
 ## 🧪 Sample Documents
 
@@ -141,8 +155,7 @@ The `data/sample_documents/` folder contains example medical documents:
 - Subdocs Alzheimer's disease
 - Subdocs beriberi desease
 
-[![Video Demo App](https://img.youtube.com/vi/ugD-2esz9-k/0.jpg)](https://www.youtube.com/watch?v=ugD-2esz9-k)
-
-
+## 🎬 Video Demo
+[![Video Demo App](https://img.youtube.com/vi/ugD-2esz9-k/default.jpg)](https://www.youtube.com/watch?v=ugD-2esz9-k)
 
 
